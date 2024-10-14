@@ -1,0 +1,717 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Nunito Sans", sans-serif;
+    letter-spacing: 0.8px;
+    text-decoration: none;
+    list-style: none;
+}
+
+@font-face {
+    font-family: 'Futura';
+    src: url('Futura/FuturaPTLight.otf') format('opentype');
+    /* Usa el formato opentype para archivos .otf */
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.header-section {
+    background-color: #DB8993;
+}
+
+
+.header-content * a:hover {
+    color: #f8e2e3;
+}
+
+.header-content * a:hover i {
+    color: #f8e2e3;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 12vw;
+    padding: 10px;
+
+}
+
+/* Estilos para los enlaces de redes sociales */
+.social-links {
+    display: flex;
+    gap: 15px;
+}
+
+.social-links a {}
+
+.social-links a:hover {}
+
+
+.header-container-right {
+    display: flex;
+    gap: 30px;
+}
+
+
+
+/* Estilos para el enlace de MI CUENTA */
+.account-link a {
+    display: flex;
+    align-items: center;
+    color: white;
+    font-size: 12px;
+}
+
+.account-link a:hover {}
+
+.account-link a i {
+    font-size: 17px;
+    margin-left: 8px;
+}
+
+/* Estilos para el enlace PUNTOS DE VENTA */
+.store-link a {
+    display: flex;
+    align-items: center;
+    color: white;
+    font-size: 12px;
+}
+
+.store-link a i {
+    font-size: 15px;
+}
+
+.store-link a:hover {}
+
+/* Iconos dentro de los enlaces */
+.header-section i {
+    margin-right: 8px;
+    color: white;
+    font-size: 19px;
+    display: flex;
+    align-items: center;
+}
+
+
+/* ----------------------------------------------- */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #fff;
+    margin: 0 12vw;
+    gap: 20px;
+    position: relative;
+}
+
+.logo {
+    flex-grow: 1;
+}
+
+.logo img {
+    display: block;
+    height: 70px;
+}
+
+.nav-links {
+    flex-grow: 1;
+}
+
+.nav-links ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: #c9727d;
+}
+
+.nav-links a:hover {
+    color: #d19397;
+}
+
+.search-bar {
+    flex-grow: 2;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.search-bar input {
+    padding: 10px;
+    font-size: 12px;
+    border: 1px solid #C9777D;
+    outline: none;
+    /*Quitar el contorno  alhacer foco*/
+    border-radius: 50px;
+    padding-right: 56.8px;
+    flex-grow: 2;
+}
+
+.search-bar input[type="text"]:hover {
+    border-color: #ebbfc2;
+    /* Mantener el borde igual */
+}
+
+/* Estilo al hacer foco */
+.search-bar input[type="text"]:focus {
+    border-color: #b79294;
+    /* Cambia el borde al hacer foco */
+}
+
+.search-bar input[type="text"]::placeholder {
+    padding-left: 20px;
+    /* text-align: center; */
+}
+
+.fa-search {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    padding: 10px 20px;
+    border: 1px solid #C9777D;
+    border-right: none;
+    /* border-top: none;
+    border-bottom: none; */
+    cursor: pointer;
+    background-color: #C9777D;
+    border-radius: 0 25px 25px 0;
+    color: white;
+}
+
+.cart-heading {
+    display: flex;
+    align-items: center;
+}
+
+.cart-heading-link {
+    display: flex;
+    align-items: center;
+}
+
+.cart-icon {
+    width: 20px;
+    /* Ancho del ícono */
+    height: 20px;
+    /* Alto del ícono */
+    margin-right: 2px;
+}
+
+.cart-icon svg {
+    width: 100%;
+    /* Hacer que el SVG use el 100% del ancho del contenedor */
+    height: 100%;
+    /* Hacer que el SVG use el 100% del alto del contenedor */
+}
+
+.cart-count {
+    background-color: #d8a6b0;
+    color: white;
+    border-radius: 50%;
+    width: 21px;
+    height: 21px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cart-count-val {
+    font-size: 12px;
+}
+
+
+/* ---------------------------- */
+
+.jet-dropdown-arrow {
+    padding-left: 4px;
+}
+
+.dropdown:hover .dropdown-content {
+    visibility: visible;
+    opacity: 1;
+}
+
+.dropdown-content {
+    visibility: hidden;
+    position: absolute;
+    background: linear-gradient(90deg, #dc8b95, #f0b5b9);
+    box-shadow: 0px 8px 10px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    padding: 30px 30px;
+    opacity: 0;
+    transition: opacity 1.5s ease;
+    color: white;
+    left: 50%;
+    top: 70%;
+    transform: translateX(-50%);
+}
+
+.dropdown-content a {
+    color: white;
+    font-size: 14px;
+    transition: color 0.5s ease;
+}
+
+.dropdown-content a:hover {
+    color: #72363a;
+}
+
+/* Aplicando Grid al contenido del dropdown */
+.dropdown-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* 3 columnas para la primera fila */
+    grid-template-rows: auto auto;
+    gap: 20px 60px;
+}
+
+/* La fila extra ocupa el ancho completo */
+.dropdown-content div:last-child {
+    grid-column: 3 / 4;
+    justify-self: center;
+}
+
+.dropdown-content>div:nth-child(-n+3) {
+    /* Elementos del 1 al 3 */
+    /* Para aplica estilos a todos los elementos hijos y descendientes seria .dropdown-content * {} y para los hijos directos .dropdown-content > * {} */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    /* width: max-content; */
+    width: 200px;
+}
+
+.dropdown-content>div:nth-child(-n+3) a:not(:last-child) {
+    display: block;
+    border-bottom: 1px solid white;
+    padding: 10px 0px;
+}
+
+/* -------------------------------------------- */
+
+
+.product-categories {
+    text-align: center;
+}
+
+.product-categories h1 {
+    font-size: 40px;
+    color: #AAAAAA;
+    font-family: 'Futura', sans-serif;
+    margin-top: 60px;
+    padding-bottom: 10px;
+}
+
+.product-categories p {
+    font-size: 20px;
+    color: #AAAAAA;
+    margin-bottom: 60px;
+    font-family: 'Futura', sans-serif;
+}
+
+.image-grid {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.image-column {
+    position: relative;
+    flex: 1;
+    text-align: center;
+}
+
+.image-column img {
+    display: block;
+    width: 100%;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.image-column h2 {
+    position: absolute;
+    bottom: 25px;
+    left: 0;
+    right: 0;
+    color: white;
+    font-size: 23px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-weight: bold;
+    text-align: center;
+    z-index: 1;
+    transition: opacity 0.3s ease;
+    font-family: 'Futura', sans-serif;
+
+}
+
+.image-column:hover img {
+    transform: scale(1.05);
+    content: url(images/1_categoria_hover.jpg);
+}
+
+.image-column:nth-child(1):hover img {
+    content: url(images/1_categoria_hover.jpg);
+}
+
+.image-column:nth-child(2):hover img {
+    content: url(images/2_categoria_hover.jpg);
+}
+
+.image-column:nth-child(3):hover img {
+    content: url(images/3_categoria_hover.jpg);
+}
+
+.image-column:nth-child(4):hover img {
+    content: url(images/4_categoria_hover.jpg);
+}
+
+.image-column:nth-child(5):hover img {
+    content: url(images/5_categoria_hover.jpg);
+}
+
+/* ------------------------------------ */
+
+.new-products {
+    margin: 0 12vw 3vw;
+}
+
+.new-products h2 {
+    font-size: 40px;
+    color: #AAAAAA;
+    margin: 60px 0px;
+    text-align: center;
+    font-family: 'Futura', sans-serif;
+}
+
+.product-grid {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.product-column {
+    background-color: white;
+    flex: 1;
+    border-radius: 8px;
+    padding: 15px 25px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.product-column img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.product-column h3 {
+    font-size: 16px;
+    color: #c9727d;
+    margin-top: 10px;
+    font-family: 'Futura', sans-serif;
+
+}
+
+.product-column p {
+    font-size: 15px;
+    color: #c9727d;
+}
+
+.product-column p:nth-of-type(2) {
+    color: #969696;
+    font-size: 14px;
+    padding-top: 3px;
+}
+
+.fa-shopping-cart {
+    color: #727176;
+    padding-right: 2px;
+
+}
+
+.price {
+    font-size: 16px;
+    color: #727176 !important;
+    /* font-weight: bold; */
+    padding: 3px 0px;
+}
+
+.discounted .original-price {
+    text-decoration: line-through;
+    color: #727176;
+}
+
+.add-to-cart {
+    color: #727176;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.add-to-cart i,
+a {
+    transition: color 0.5s ease;
+}
+
+
+.add-to-cart:hover {
+    color: #c9727d;
+}
+
+.add-to-cart:hover i {
+    color: #c9727d;
+}
+
+.product-column:hover {
+    box-shadow: inset 1px 1px 8px rgba(84, 83, 83, 0.2);
+    transform: scale(1.05);
+    /* Aumenta el tamaño al pasar el mouse */
+}
+
+/* ------------------------------------ */
+
+.section-biofemme {
+    background-image: url('images/background_1.jpg');
+    background-repeat: no-repeat;
+    /* background-size: cover; */
+    /* Ajusta la imagen de fondo para cubrir toda la sección */
+    background-position: center;
+    /* Centra la imagen */
+    background-size: 125%;
+    height: 500px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    /* Centra verticalmente los elementos */
+    padding: 20px;
+}
+
+.text-container-biofemme * {
+    color: #B16B78;
+    /* Cambia el color del texto según sea necesario */
+    text-align: center;
+    /* Alineación a la izquierda */
+    font-family: "Futura", sans-serif;
+    font-size: 40px;
+    width: 400px;
+}
+
+.text-container-biofemme {
+    justify-self: center;
+}
+
+.view-all {
+    display: block;
+    color: #B16B78;
+    font-size: 23px;
+    font-weight: bold;
+    border-top: 1px solid #B16B78;
+    border-bottom: 1px solid #B16B78;
+    width: 300px;
+    padding: 10px;
+    margin: auto;
+    margin-top: 25px;
+    transition: color 0.5s ease;
+}
+
+.view-all:hover {
+    color: #824953;
+}
+
+/* ------------------------------------ */
+
+.section-asesoria {
+    background-image: url('images/background_2.jpg');
+    background-repeat: no-repeat;
+    /* background-size: cover; */
+    /* Ajusta la imagen de fondo para cubrir toda la sección */
+    background-position: center;
+    /* Centra la imagen */
+    background-size: 125%;
+    height: 500px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    padding: 20px;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+.text-container-asesoria {
+    grid-column: 2 / 3;
+}
+
+.text-container-asesoria * {
+    color: #B8B8B8;
+    text-align: center;
+    font-family: "Futura", sans-serif;
+    font-size: 40px;
+}
+
+.text-container-asesoria {
+    justify-self: center;
+}
+
+.btn-asesoria {
+    display: block;
+    color: #B8B8B8;
+    font-size: 23px;
+    font-weight: bold;
+    border-top: 1px solid #B8B8B8;
+    border-bottom: 1px solid #B8B8B8;
+    padding: 10px;
+    margin-top: 25px;
+    transition: color 0.5s ease;
+}
+
+.btn-asesoria:hover {
+    color: #898989;
+}
+
+/* ----------------------------------- */
+
+/* Estilos generales del footer */
+.footer-biofemme {
+    color: white;
+}
+
+/* Estilos para los enlaces */
+.footer-biofemme a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    display: block;
+    margin-bottom: 5px;
+    font-family: "Futura", sans-serif;
+
+}
+
+.footer-biofemme a:hover {
+    text-decoration: underline;
+}
+
+.footer-biofemme h2 {
+    font-size: 20px;
+    font-family: "Futura", sans-serif;
+}
+
+.footer-biofemme p {
+    font-size: 14px;
+    font-family: "Futura", sans-serif;
+
+}
+
+/* Estilos para la sección superior */
+
+.background-footer-top {
+    background-color: #DB8993;
+}
+
+.footer-top {
+    /* margin: 0 12vw; Se ve mal */
+    display: flex;
+    justify-content: space-between;
+    padding: 8px;
+}
+
+.footer-top .column {
+    text-align: center;
+    width: 50%;
+}
+
+.footer-top .column:nth-child(2) {
+    border-left: 2px solid white;
+}
+
+.footer-top .column h2 a {
+    font-size: 20px;
+    font-family: "Futura", sans-serif;
+    margin: 0px;
+}
+
+.footer-top .column h2 a:hover {
+    text-decoration: none;
+    color: #f1dadc;
+}
+
+/* Estilos para la sección inferior */
+
+.background-footer-bottom {
+    background-image: url('images/footer-bf.jpg'), linear-gradient(360deg, #000000d3 0%, #7e7e7ed4 100%);
+    background-blend-mode: overlay;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 35%;
+    /* 50% a lo largo del eje X, 35% a lo largo del eje Y */
+    color: white;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 12vw;
+    padding: 40px 0px;
+}
+
+.footer-bottom p {
+    font-size: 15px;
+}
+
+.footer-bottom a {
+    font-size: 15px;
+}
+
+.footer-bottom .column {
+    width: 33.33%;
+    display: grid;
+    place-items: center;
+}
+
+.footer-bottom .column:nth-child(1) {
+    text-align: center;
+}
+
+/* Estilos para las imagenes del logo */
+.footer-logo,
+.payment-logo {
+    display: block;
+    margin-bottom: 10px;
+    max-width: 100%;
+    height: 80px;
+    object-fit: contain;
+}
+
+.payment-logo {
+    height: 43px;
+}
+
+/* Estilos para la sección de réplica */
+.footer-replica {
+    text-align: center;
+    padding: 8px 0px 5px;
+    background-color: #F9F9F9;
+    color: #5D5D5D;
+}
+
+.footer-replica p {
+    font-size: 13px;
+}
+
+.footer-replica a {
+    display: inline-block;
+    color: #5D5D5D;
+}
